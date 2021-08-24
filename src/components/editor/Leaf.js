@@ -25,7 +25,7 @@ const Leaf = ({ decors = {}, attributes, children, leaf } = {}) => {
 
     // wrap children around component
     const Component = decors[key];
-    children = <Component dkey={key} {...attributes}>{children}</Component>;
+    children = <Component key={key} {...attributes}>{children}</Component>;
   })
 
   return <span {...attributes}>{children}</span>;
