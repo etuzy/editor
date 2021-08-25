@@ -8,7 +8,10 @@ export default (editor, { state }) => {
   const isH1 = isFormatActive(editor, 'block', types.h1);
   const isH2 = isFormatActive(editor, 'block', types.h2);
   const isH3 = isFormatActive(editor, 'block', types.h3);
-  const isHeading = isH1 || isH2 || isH3;
+  const isH4 = isFormatActive(editor, 'block', types.h4);
+  const isH5 = isFormatActive(editor, 'block', types.h5);
+  const isH6 = isFormatActive(editor, 'block', types.h6);
+  const isHeading = isH1 || isH2 || isH3 || isH4 || isH5 || isH6;
 
   return {
 
@@ -22,6 +25,9 @@ export default (editor, { state }) => {
     isH1,
     isH2,
     isH3,
+    isH4,
+    isH5,
+    isH6,
     isHeading,
     isLink: isFormatActive(editor, 'block', types.a),
     isParagraph: isFormatActive(editor, 'block', types.p),

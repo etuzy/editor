@@ -36,6 +36,9 @@ const paragraph = (_, children) => ({ children, ...attrs.p() })
 const headingOne = (_, children) => ({ children, ...attrs.h1() })
 const headingTwo = (_, children) => ({ children, ...attrs.h2() })
 const headingThree = (_, children) => ({ children, ...attrs.h3() });
+const headingFour = (_, children) => ({ children, ...attrs.h4() });
+const headingFive = (_, children) => ({ children, ...attrs.h5() });
+const headingSix = (_, children) => ({ children, ...attrs.h6() });
 const link = ({ href } = {}, children) => ({ children, ...attrs.a({ href }) });
 const listBulleted = (_, children) => ({ children, ...attrs.ul() });
 const listNumbered = (_, children) => ({ children, ...attrs.ol() });
@@ -61,9 +64,9 @@ export const tags = {
   'H1': headingOne,
   'H2': headingTwo,
   'H3': headingThree,
-  'H4': headingThree,
-  'H5': headingThree,
-  'H6': headingThree,
+  'H4': headingFour,
+  'H5': headingFive,
+  'H6': headingSix,
   'A': link,
   'UL': listBulleted,
   'OL': listNumbered,
