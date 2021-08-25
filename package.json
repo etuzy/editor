@@ -89,7 +89,7 @@
     "is-url": "^1.2.4",
     "lodash": "^4.17.15",
     "slate": "^0.65.3",
-    "slate-history": "0.61.3",
+    "slate-history": "^0.65.3",
     "slate-hyperscript": "0.61.3",
     "slate-react": "0.61.3"
   }
