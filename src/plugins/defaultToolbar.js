@@ -9,6 +9,9 @@ import { ReactComponent as IconHeadings } from '@assets/heading.svg';
 import { ReactComponent as IconHeadingOne } from '@assets/heading1.svg';
 import { ReactComponent as IconHeadingTwo } from '@assets/heading2.svg';
 import { ReactComponent as IconHeadingThree } from '@assets/heading3.svg';
+import { ReactComponent as IconHeadingFour } from '@assets/heading4.svg';
+import { ReactComponent as IconHeadingFive } from '@assets/heading5.svg';
+import { ReactComponent as IconHeadingSix } from '@assets/heading6.svg';
 import { ReactComponent as IconBold } from '@assets/bold.svg';
 import { ReactComponent as IconItalic } from '@assets/italic.svg';
 import { ReactComponent as IconUnderline } from '@assets/underline.svg';
@@ -59,7 +62,7 @@ export const HeadingOneButton = props => (
   <ToolbarButton
     id='mms--toolbar-button-h1'
     active={props.formats.isH1}
-    children={props.children || <IconHeadingOne />}
+    children={props.children || <IconHeadingOne style={{width: 28, height: 28}} />}
     onClick={() => {
       props.functions.toggleHeading(1);
       props.setScreen(SCREEN_DEFAULT);
@@ -71,7 +74,7 @@ export const HeadingTwoButton = props => (
   <ToolbarButton
     id='mms--toolbar-button-h2'
     active={props.formats.isH2}
-    children={props.children || <IconHeadingTwo />}
+    children={props.children || <IconHeadingTwo style={{width: 28, height: 28}} />}
     onClick={() => {
       props.functions.toggleHeading(2);
       props.setScreen(SCREEN_DEFAULT);
@@ -83,9 +86,45 @@ export const HeadingThreeButton = props => (
   <ToolbarButton
     id='mms--toolbar-button-h3'
     active={props.formats.isH3}
-    children={props.children || <IconHeadingThree />}
+    children={props.children || <IconHeadingThree style={{width: 28, height: 28}} />}
     onClick={() => {
       props.functions.toggleHeading(3);
+      props.setScreen(SCREEN_DEFAULT);
+    }}
+  />
+);
+
+export const HeadingFourButton = props => (
+  <ToolbarButton
+    id='mms--toolbar-button-h4'
+    active={props.formats.isH4}
+    children={props.children || <IconHeadingFour style={{width: 28, height: 28}} />}
+    onClick={() => {
+      props.functions.toggleHeading(4);
+      props.setScreen(SCREEN_DEFAULT);
+    }}
+  />
+);
+
+export const HeadingFiveButton = props => (
+  <ToolbarButton
+    id='mms--toolbar-button-h5'
+    active={props.formats.isH5}
+    children={props.children || <IconHeadingFive style={{width: 28, height: 28}} />}
+    onClick={() => {
+      props.functions.toggleHeading(5);
+      props.setScreen(SCREEN_DEFAULT);
+    }}
+  />
+);
+
+export const HeadingSixButton = props => (
+  <ToolbarButton
+    id='mms--toolbar-button-h6'
+    active={props.formats.isH6}
+    children={props.children || <IconHeadingSix style={{width: 28, height: 28}} />}
+    onClick={() => {
+      props.functions.toggleHeading(6);
       props.setScreen(SCREEN_DEFAULT);
     }}
   />
@@ -301,6 +340,9 @@ export default {
         HeadingOneButton,
         HeadingTwoButton,
         HeadingThreeButton,
+        HeadingFourButton,
+        HeadingFiveButton,
+        HeadingSixButton,
       ],
 
       // link screen layout

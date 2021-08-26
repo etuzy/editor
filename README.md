@@ -107,6 +107,9 @@ const App = () => {
 * **isH1** *(boolean)* - True if cursor / selection is in a h1 block.
 * **isH2** *(boolean)* - True if cursor / selection is in a h2 block.
 * **isH3** *(boolean)* - True if cursor / selection is in a h3 block.
+* **isH4** *(boolean)* - True if cursor / selection is in a h4 block.
+* **isH5** *(boolean)* - True if cursor / selection is in a h5 block.
+* **isH6** *(boolean)* - True if cursor / selection is in a h6 block.
 * **isHeading** *(boolean)* - True if cursor / selection is in an heading block.
 * **isLink** *(boolean)* - True if cursor / selection is on a link block.
 * **isParagraph** *(boolean)* - True if cursor / selection is in a paragraph block (which is the default).

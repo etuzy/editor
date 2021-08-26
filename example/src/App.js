@@ -160,6 +160,9 @@ function App() {
           isH1,
           isH2,
           isH3,
+          isH4,
+          isH5,
+          isH6,
           isLink,
           isParagraph,
           isBlockquote,
@@ -326,7 +329,10 @@ function App() {
                 <button disabled className={`has-item-right ${isParagraph ? 'active' : ''}`} onMouseDown={e => { e.preventDefault(); }}>p</button>
                 <button className={`has-item-right has-item-left ${isH1 ? 'active' : ''}`} onMouseDown={e => { e.preventDefault(); functions.toggleHeading(1); }}>h1</button>
                 <button className={`has-item-right has-item-left ${isH2 ? 'active' : ''}`} onMouseDown={e => { e.preventDefault(); functions.toggleHeading(2); }}>h2</button>
-                <button className={`has-item-left ${isH3 ? 'active' : ''}`} onMouseDown={e => { e.preventDefault(); functions.toggleHeading(3); }}>h3</button>
+                <button className={`has-item-right has-item-left ${isH3 ? 'active' : ''}`} onMouseDown={e => { e.preventDefault(); functions.toggleHeading(3); }}>h3</button>
+                <button className={`has-item-right has-item-left ${isH4 ? 'active' : ''}`} onMouseDown={e => { e.preventDefault(); functions.toggleHeading(4); }}>h4</button>
+                <button className={`has-item-right has-item-left ${isH5 ? 'active' : ''}`} onMouseDown={e => { e.preventDefault(); functions.toggleHeading(5); }}>h5</button>
+                <button className={`has-item-left ${isH6 ? 'active' : ''}`} onMouseDown={e => { e.preventDefault(); functions.toggleHeading(6); }}>h6</button>
               </section>
               <section className="merge-above">
                 <button className={`has-item-right ${isBlockquote ? 'active' : ''}`} onMouseDown={e => { e.preventDefault(); functions.toggleBlockquote(); }}>blockquote</button>
