@@ -62,7 +62,7 @@ export const HeadingOneButton = props => (
   <ToolbarButton
     id='mms--toolbar-button-h1'
     active={props.formats.isH1}
-    children={props.children || <IconHeadingOne />}
+    children={props.children || <IconHeadingOne style={{width: 28, height: 28}} />}
     onClick={() => {
       props.functions.toggleHeading(1);
       props.setScreen(SCREEN_DEFAULT);
@@ -74,7 +74,7 @@ export const HeadingTwoButton = props => (
   <ToolbarButton
     id='mms--toolbar-button-h2'
     active={props.formats.isH2}
-    children={props.children || <IconHeadingTwo />}
+    children={props.children || <IconHeadingTwo style={{width: 28, height: 28}} />}
     onClick={() => {
       props.functions.toggleHeading(2);
       props.setScreen(SCREEN_DEFAULT);
@@ -86,7 +86,7 @@ export const HeadingThreeButton = props => (
   <ToolbarButton
     id='mms--toolbar-button-h3'
     active={props.formats.isH3}
-    children={props.children || <IconHeadingThree />}
+    children={props.children || <IconHeadingThree style={{width: 28, height: 28}} />}
     onClick={() => {
       props.functions.toggleHeading(3);
       props.setScreen(SCREEN_DEFAULT);
@@ -98,7 +98,7 @@ export const HeadingFourButton = props => (
   <ToolbarButton
     id='mms--toolbar-button-h4'
     active={props.formats.isH4}
-    children={props.children || <IconHeadingFour />}
+    children={props.children || <IconHeadingFour style={{width: 28, height: 28}} />}
     onClick={() => {
       props.functions.toggleHeading(4);
       props.setScreen(SCREEN_DEFAULT);
@@ -110,7 +110,7 @@ export const HeadingFiveButton = props => (
   <ToolbarButton
     id='mms--toolbar-button-h5'
     active={props.formats.isH5}
-    children={props.children || <IconHeadingFive />}
+    children={props.children || <IconHeadingFive style={{width: 28, height: 28}} />}
     onClick={() => {
       props.functions.toggleHeading(5);
       props.setScreen(SCREEN_DEFAULT);
@@ -122,7 +122,7 @@ export const HeadingSixButton = props => (
   <ToolbarButton
     id='mms--toolbar-button-h6'
     active={props.formats.isH6}
-    children={props.children || <IconHeadingSix />}
+    children={props.children || <IconHeadingSix style={{width: 28, height: 28}} />}
     onClick={() => {
       props.functions.toggleHeading(6);
       props.setScreen(SCREEN_DEFAULT);
