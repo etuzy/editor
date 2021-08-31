@@ -15,7 +15,7 @@ const TooolbarWrapper = props => {
   const editor = useSlate();
 
   const inlineProps = {
-    position: 'absolute',
+    position: 'fixed',
     transform: 'translateX(-50%) translateY(-100%)',
     marginTop: -12,
     zIndex: 1,
