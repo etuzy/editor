@@ -3,7 +3,7 @@
   "version": "0.0.37",
   "data-version": 1,
   "description": "",
-  "author": "Oguz Gelal <oguz@marketmuse.com>",
+  "author": "info@marketmuse.com",
   "license": "MIT",
   "repository": "https://github.com/marketmuse/editor",
   "main": "dist/mms-editor.js",
