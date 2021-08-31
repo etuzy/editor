@@ -15,7 +15,7 @@ const TooolbarWrapper = props => {
   const editor = useSlate();
 
   const inlineProps = {
-    position: 'fixed',
+    position: 'absolute',
     transform: 'translateX(-50%) translateY(-100%)',
     marginTop: -12,
     zIndex: 1,
@@ -78,7 +78,7 @@ const TooolbarWrapper = props => {
     <div
       inline={props.inline}
       className={className}
-      style={Object.assign({}, props.style, props.inline ? inlineProps : {})}
+      style={Object.assign({}, props.style, props.inline ? inlineProps : {position: 'fixed'})}
     >
       {props.children}
     </div>
