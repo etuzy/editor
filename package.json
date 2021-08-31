@@ -1,6 +1,6 @@
 {
   "name": "@marketmuse/editor",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "data-version": 1,
   "description": "",
   "author": "Oguz Gelal <oguz@marketmuse.com>",
@@ -56,7 +56,7 @@
     "cross-env": "^5.1.4",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "eslint": "^5.0.1",
+    "eslint": "^7.11.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
     "eslint-plugin-import": "^2.13.0",
@@ -70,7 +70,7 @@
     "jest-enzyme": "^7.1.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4",
+    "react-scripts": "^4.0.3",
     "rollup": "^0.64.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-bundle-worker": "^0.1.0",
@@ -91,6 +91,6 @@
     "slate": "^0.65.3",
     "slate-history": "^0.65.3",
     "slate-hyperscript": "^0.62.0",
-    "slate-react": "0.61.3"
+    "slate-react": "^0.65.3"
   }
 }
