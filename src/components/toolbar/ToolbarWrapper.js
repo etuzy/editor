@@ -78,7 +78,7 @@ const TooolbarWrapper = props => {
     <div
       inline={props.inline}
       className={className}
-      style={Object.assign({}, props.style, props.inline ? inlineProps : {})}
+      style={Object.assign({}, props.style, props.inline ? inlineProps : {position: 'fixed'})}
     >
       {props.children}
     </div>
