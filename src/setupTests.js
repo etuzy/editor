@@ -2,7 +2,7 @@ const configure = require('enzyme').configure;
 const Adapter = require('enzyme-adapter-react-16');
 const { JSDOM } = require('jsdom');
 
-const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
+const jsdom = new JSDOM('...');
 const { window } = jsdom;
 
 function copyProps(src, target) {
@@ -32,7 +32,7 @@ global.window.document.createRange = () => ({
     ownerDocument: document,
   },
 });
-global.window.getSelection = () => {
+global.window.document.getSelection = () => {
   return {
     addRange: () => {},
     removeAllRanges: () => {},
