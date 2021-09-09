@@ -8,20 +8,18 @@
 import { Node } from 'slate';
 import { types } from '@config/common';
 
-export default (fragments = []) => fragments
+export default (fragments = []) => (
+  (fragments?.children || fragments)
+    .map(f => ( // wrap lonely text nodes
+      ((!f.type && f.text) || f.type === types.a)
+        ? { children: [f], type: types.p }
+        : f
+    ))
+    .filter(node => { // filter out empty paragraph nodes
+      if (node.type === types.p) {
+        return Node.string(node).trim() !== ''
+      }
 
-  // wrap lonely text nodes
-  .map(f => (
-    ((!f.type && f.text) || f.type === types.a)
-      ? { children: [f], type: types.p }
-      : f
-  ))
-
-  // filter out empty paragraph nodes
-  .filter(node => {
-    if (node.type === types.p) {
-      return Node.string(node).trim() !== ''
-    }
-
-    return true;
-  })
+      return true;
+    })
+);
