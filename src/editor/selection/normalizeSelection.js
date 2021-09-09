@@ -37,6 +37,7 @@ export default editor => {
       distance: 1,
       unit: 'offset',
       reverse: true,
+      edge: 'focus',
     })
   }
 }

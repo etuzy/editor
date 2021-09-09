@@ -29,7 +29,9 @@ export default (editor, type, format, { status } = {}) => {
 
       // are we toggling a list type ?
       const listTypeTypes = [types.ol, types.ul];
+      const headingTypeTypes = [types.h1, types.h2, types.h3, types.h4, types.h5, types.h6];
       const isListType = listTypeTypes.includes(format);
+      const isHeadingType = headingTypeTypes.includes(format);
 
       // if toggling list node, unwrap it first
       Transforms.unwrapNodes(editor, {
@@ -41,11 +43,15 @@ export default (editor, type, format, { status } = {}) => {
       // otherwise, set to the desired format it is a non-list format. if it is
       // a list format, set block to list-item format (and wrap it around the list
       // format later on)
-      Transforms.setNodes(editor, {
-        type: !toggleOn
-          ? types.p
-          : (isListType ? types.li : format)
-      })
+      Transforms.setNodes(
+        editor,
+        {
+          type: !toggleOn
+            ? types.p
+            : (isListType ? types.li : format)
+        },
+        { split: isHeadingType }
+      )
 
       // if toggling on a list type, wrap the list
       // item children around parent list format
