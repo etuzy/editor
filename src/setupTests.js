@@ -32,7 +32,7 @@ global.window.document.createRange = () => ({
     ownerDocument: document,
   },
 });
-global.window.document.getSelection = () => {
+global.window.getSelection = () => {
   return {
     addRange: () => {},
     removeAllRanges: () => {},
