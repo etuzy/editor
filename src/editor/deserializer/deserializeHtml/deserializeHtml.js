@@ -86,6 +86,7 @@ const deserializeHtml = (options = {}, el, inherit = {}) => {
   const isText = nodeType === window.Node.TEXT_NODE;
   const isElement = nodeType === window.Node.ELEMENT_NODE;
   const isLink = nodeName === 'A';
+  const isList = nodeName === 'UL' || nodeName === 'OL';
   const hasTextContent = !!textContent;
   // enhance current nodes args
   let instructionArgs = { ...childrenArgs }
@@ -138,6 +139,11 @@ const deserializeHtml = (options = {}, el, inherit = {}) => {
   if (strategyContinue) {
     return children;
   }
+
+  if (isList) {
+    children = children.filter(item => item.type === 'list-item')
+  }
+
   // parse node and children normally
   return deserialize(nodeName, { ...htmlAttrs, ...instructionArgs }, children);
 }

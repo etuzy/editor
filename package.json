@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "jest --config=./jest.config.js",
-    "test:watch": "react-scripts test --env=jsdom --moduleNameMapper='{\"@(.*)\":\"<rootDir>/src/$1\", \"worker!./\":\"<rootDir>/src/editor/decorators/decorateWorker.js\"}'",
+    "test:watch": "jest --watch --config=./jest.config.js",
     "build": "rollup -c",
     "build:example": "yarn predeploy",
     "start": "rollup -c -w",
